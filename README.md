@@ -9,7 +9,7 @@ __Window Maker with Composition Effects__
 
 Install latest version of __Window Maker__ (Window Manager).
 
-You can install it from your distro package manager or build it from this sources (recommended).
+You can install it from your distro package manager (recommended) or build it from this sources.
 
 ### Window Maker
 
