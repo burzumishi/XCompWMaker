@@ -3,8 +3,7 @@ XCompWMaker
 
 Classic Window Maker with Composition effects.
 
-Description
-===========
+## Window Maker
 
 Window Maker is the GNU window manager for the X Window System. It was designed to emulate the look and feel of part of the NEXTSTEP(tm) GUI. It's supposed to be relatively fast and small, feature rich, easy to configure and easy to use, with a simple and elegant appearance borrowed from NEXTSTEP(tm).
 
@@ -17,11 +16,7 @@ Window Maker was previously called WindowMaker.
 
 Window Maker has no connection with Windowmaker, the software for making windows and doors.
 
-
-Documentation
-=============
-
-Read before asking.
+### Documentation
 
 * README files all over the source tree have info related to the stuff in the directories. 
 * INSTALL has installation instructions and some troubleshooting tips. You're meant to read it if you are compiling the sources.
@@ -31,13 +26,11 @@ Read before asking.
 * ChangeLog: what changed from the previous version?
 * BUGS: list of known bugs
 
-*** User Guide
+#### User Guide
 
 The Window Maker User's Guide can be downloaded from the official ftp or web sites.
-
 The User Guide explains how to use Window Maker, the configuration files and options.
 
-
-*** man pages
+#### man pages
 
 Type "man wmaker" in the shell prompt to get general help about Window Maker
