@@ -7,6 +7,12 @@ Classic Window Maker with Composition effects.
 
 xcompmgr is a sample compositing manager for X servers supporting the XFIXES, DAMAGE, RENDER, and COMPOSITE extensions.  It enables basic eye-candy effects.
 
+## Compton (xcompmgr fork)
+
+__Compton__ is a compositor for X, and a fork of __xcompmgr-dana__.
+
+I was frustrated by the low amount of standalone lightweight compositors. Compton was forked from Dana Jansens' fork of xcompmgr and refactored.  I fixed whatever bug I found, and added features I wanted. Things seem stable, but don't quote me on it. I will most likely be actively working on this until I get the features I want. This is also a learning experience for me. That is, I'm partially doing this out of a desire to learn Xlib.
+
 ## Cairo Composite Manager
 
 Cairo Composite Manager is a versatile and extensible composite manager which use cairo for rendering.
