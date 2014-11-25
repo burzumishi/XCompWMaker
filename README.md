@@ -3,6 +3,10 @@ XCompWMaker
 
 Classic Window Maker with Composition effects.
 
+## xcompmgr (Xorg)
+
+xcompmgr is a sample compositing manager for X servers supporting the XFIXES, DAMAGE, RENDER, and COMPOSITE extensions.  It enables basic eye-candy effects.
+
 ## Cairo Composite Manager
 
 Cairo Composite Manager is a versatile and extensible composite manager which use cairo for rendering.
