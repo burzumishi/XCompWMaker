@@ -5,7 +5,7 @@ Classic Window Maker with Composition effects.
 
 ## xcompmgr (Xorg)
 
-xcompmgr is a sample compositing manager for X servers supporting the XFIXES, DAMAGE, RENDER, and COMPOSITE extensions.  It enables basic eye-candy effects.
+__xcompmgr__ is a sample compositing manager for X servers supporting the XFIXES, DAMAGE, RENDER, and COMPOSITE extensions.  It enables basic eye-candy effects.
 
 ## Compton (xcompmgr fork)
 
@@ -15,12 +15,12 @@ I was frustrated by the low amount of standalone lightweight compositors. Compto
 
 ## Cairo Composite Manager
 
-Cairo Composite Manager is a versatile and extensible composite manager which use cairo for rendering.
+__Cairo Composite Manager__ is a versatile and extensible composite manager which use cairo for rendering.
 Plugins can be used to add some cool effects to your desktop.
 
 ## Window Maker
 
-Window Maker is the GNU window manager for the X Window System. It was designed to emulate the look and feel of part of the NEXTSTEP(tm) GUI. It's supposed to be relatively fast and small, feature rich, easy to configure and easy to use, with a simple and elegant appearance borrowed from NEXTSTEP(tm).
+__Window Maker__ is the GNU window manager for the X Window System. It was designed to emulate the look and feel of part of the NEXTSTEP(tm) GUI. It's supposed to be relatively fast and small, feature rich, easy to configure and easy to use, with a simple and elegant appearance borrowed from NEXTSTEP(tm).
 
 Window Maker was designed keeping integration with GNUstep in mind and is the "official" window manager for it. It is also part of the GNU project (www.gnu.org) Read more about GNUstep further on this file.
 
