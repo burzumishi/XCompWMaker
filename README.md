@@ -3,9 +3,19 @@ XCompWMaker
 
 __Window Maker with Composition Effects__
 
-All these packages where modified to work together, choose the ones you want to play arround with:
+# Instructions
 
-Choose a composition manager to install: 
+Install latest version of __Window Maker__ (Window Manager).
+
+You can install it from your distro package manager or build it from this sources (recommended).
+
+## 1. Install Window Maker
+
+__Window Maker__ is the GNU window manager for the X Window System. It was designed to emulate the look and feel of part of the NEXTSTEP(tm) GUI. It's supposed to be relatively fast and small, feature rich, easy to configure and easy to use, with a simple and elegant appearance borrowed from NEXTSTEP(tm). Window Maker was designed keeping integration with GNUstep in mind and is the "official" window manager for it. It is also part of the GNU project (www.gnu.org) Read more about GNUstep further on this file.
+
+## 2. Install Composite Manager
+
+Then choose a composite manager to install (you can install all of them):
 
 ### xcompmgr (Xorg)
 
@@ -22,18 +32,25 @@ I was frustrated by the low amount of standalone lightweight compositors. Compto
 __Cairo Composite Manager__ is a versatile and extensible composite manager which use cairo for rendering.
 Plugins can be used to add some cool effects to your desktop.
 
+## 3. Desktop Setup
 
-And install latest version of __Window Maker__ (Window Manager):
+Edit the file __"~/GNUstep/Library/WindowMaker/autostart"__, and uncomment a composite manager.
 
-### Window Maker
+```
+# xcompmgr -d "$DISPLAY" -f -F -I -O -c -r3 -o.60 -l0 -t0 -D3 &
 
-__Window Maker__ is the GNU window manager for the X Window System. It was designed to emulate the look and feel of part of the NEXTSTEP(tm) GUI. It's supposed to be relatively fast and small, feature rich, easy to configure and easy to use, with a simple and elegant appearance borrowed from NEXTSTEP(tm).
+compton -d "$DISPLAY" \
+	-r 6 -o .90 -l -3 -t -3 -I -O -D 5 -e 1.0 -i 0.8 -c \
+	--dbus --vsync opengl --xrender-sync \
+	--unredir-if-possible --glx-no-stencil \
+	--detect-transient --sw-opti --paint-on-overlay \
+	--detect-rounded-corners &
 
-Window Maker was designed keeping integration with GNUstep in mind and is the "official" window manager for it. It is also part of the GNU project (www.gnu.org) Read more about GNUstep further on this file.
+# compton -d "$DISPLAY" -r 12 -o .60 -l -5 -t -5 -I -O -D 5 -e 1.0 -i 0.8 -c --dbus &
+```
 
-Hints (information given by applications to integrate well with the window manager) for Motif(tm) and NETWM are also supported (NETWM is used by KDE and GNOME, so they are automatically supported as a result).  So you can replace any
-of the window managers for these environments with Window Maker while keeping most, if not all, of the native window manager functionality.
+Edit the file __"~/GNUstep/Library/WindowMaker/autoexit"__, and uncomment the same composite manager as before.
 
-Window Maker was previously called WindowMaker.
-Window Maker has no connection with Windowmaker, the software for making windows and doors.
+Start or restart __WindowMaker__, now you can setup your desktop!
 
+Have fun!
