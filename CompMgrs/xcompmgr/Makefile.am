@@ -1,0 +1,19 @@
+SUBDIRS = man
+
+bin_PROGRAMS = xcompmgr
+
+AM_CFLAGS = $(CWARNFLAGS) $(XCOMPMGR_CFLAGS)
+xcompmgr_LDADD = $(XCOMPMGR_LIBS) -lm
+
+MAINTAINERCLEANFILES = ChangeLog INSTALL
+
+.PHONY: ChangeLog INSTALL
+
+INSTALL:
+	$(INSTALL_CMD)
+
+ChangeLog:
+	$(CHANGELOG_CMD)
+
+dist-hook: ChangeLog INSTALL
+

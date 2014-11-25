@@ -1,0 +1,7 @@
+.*.swp
+*.o
+.deps
+.libs
+Makefile
+Makefile.in
+wmvolman

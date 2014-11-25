@@ -1,0 +1,6 @@
+debian/tmp/usr/lib/cairo-compmgr/lib*.so usr/lib/cairo-compmgr
+debian/tmp/usr/lib/cairo-compmgr/*.plugin usr/lib/cairo-compmgr
+debian/tmp/usr/share/cairo-compmgr/schemas/*.schema-key usr/share/cairo-compmgr/schemas
+debian/tmp/usr/share/cairo-compmgr/ui/*.ui usr/share/cairo-compmgr/ui
+debian/tmp/usr/share/cairo-compmgr/ui/*.svg usr/share/cairo-compmgr/ui
+debian/tmp/usr/share/cairo-compmgr/ui/*.png usr/share/cairo-compmgr/ui

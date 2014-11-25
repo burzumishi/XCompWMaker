@@ -1,0 +1,4 @@
+#define wmeyespupil_width 6
+#define wmeyespupil_height 8
+static unsigned char wmeyespupil_bits[] = {
+   0x0c, 0x1e, 0x3f, 0x3f, 0x3f, 0x3f, 0x1e, 0x0c};

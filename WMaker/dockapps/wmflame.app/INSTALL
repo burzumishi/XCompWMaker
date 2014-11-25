@@ -1,0 +1,15 @@
+How to install wmflame ?
+
+1) tar -xvzf wmflame-x.xx.tar.gz
+2) cd wmflame.app/wmflame
+3) make
+4) (become root)
+5) make install
+6) (leave root)
+7) wmflame &
+or
+8) (in afterstep) add the following line to your "wharf" file:
+
+*Wharf wmflame - Swallow "wmflame" wmflame &
+
+

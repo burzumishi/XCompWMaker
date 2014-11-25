@@ -1,0 +1,42 @@
+wmsystemtray (1.4) unstable; urgency=low
+
+  * Remove testing code for unimplemented balloon messages.
+  * Use SIGUSR1 and SIGUSR2 for paging.
+
+ -- Brad Jorsch <anomie@users.sourceforge.net>  Sat, 22 Feb 2014 21:11:17 -0500
+
+wmsystemtray (1.3) unstable; urgency=medium
+
+  * Remove debian directory, I see someone has officially packaged it (:
+  * Fix manpage section.
+
+ -- Brad Jorsch <anomie@users.sourceforge.net>  Fri, 07 Feb 2014 13:49:44 -0500
+
+wmsystemtray (1.2) unstable; urgency=low
+
+  * Correct a bug in detecting that we lost the freedesktop system tray
+    selection ownership.
+
+ -- Brad Jorsch <anomie@users.sourceforge.net>  Wed, 20 Jan 2010 11:33:19 -0500
+
+wmsystemtray (1.1) unstable; urgency=low
+
+  * Add debian directory, so I can create local debs. If a Debian developer
+    wants to officially package this for Debian, just let me know and I will
+    gladly remove it from my upstream sources.
+  * Poorly-behaved apps (i.e. pretty much all of them) die if their tray icon
+    window gets destroyed. Use XFixesChangeSaveSet to prevent this from
+    happening if someone uses Window Maker's "Kill" on us.
+  * Handle the case where poorly-behaved apps try to map their own icon
+    instead of letting us do it.
+  * Generic configure cleanups.
+  * Minor fixes to build cleanly with -Wall.
+  * Bump copyright date.
+
+ -- Brad Jorsch <anomie@users.sourceforge.net>  Mon, 18 Jan 2010 15:07:27 -0500
+
+wmsystemtray (1.0) unstable; urgency=low
+
+  * Initial release.
+
+ -- Brad Jorsch <anomie@users.sourceforge.net>  Fri, 01 Jan 2010 20:31:39 -0500

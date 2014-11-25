@@ -1,0 +1,181 @@
+Overview of Changes in Cairo Composite Manager 0.3.4
+====================================
+* Stopping magic mushroom and really fix timeout interval
+
+Overview of Changes in Cairo Composite Manager 0.3.3
+====================================
+* Fix timeout interval calculation
+* Fix vblank sync
+* Depends from vala-0.18
+
+Overview of Changes in Cairo Composite Manager 0.3.2
+====================================
+* Improve timeout interval delay calculation
+* Fix refresh rate detection and vblank sync
+
+Overview of Changes in Cairo Composite Manager 0.3.1
+====================================
+
+* Port to vala-0.16
+* Send ICCM event notification on CCM start/stop (based from Gianpiero patch)
+* Fix on screen resize
+* Fix screen refresh lookup
+* Add auto-refresh and to sync to vblank options
+* Update license to LGPL v3
+* Add stats plugin
+* Code cleanup
+* Enhance video memory footprint.
+* Add keyboard navigation in Mosaic Mode (close FS#39)
+* Clone plugin improvements
+* Some bug fixes and small performance enhancement
+
+Overview of Changes in Cairo Composite Manager 0.3.0
+====================================
+
+* Fix some crash and performances improvements
+
+Overview of Changes in Cairo Composite Manager 0.2.98
+====================================
+
+* Fix some crash and performances improvements
+
+Overview of Changes in Cairo Composite Manager 0.2.97
+====================================
+
+* Some performances improvements
+* Rewrite plugin options load
+* Fix root background setting
+* Fix fake blur
+* Add window animation plugin
+* Fix vala support
+* Fix clone plugin
+
+Overview of Changes in Cairo Composite Manager 0.2.96
+====================================
+
+* Some performances improvements
+* Fix some crash
+* Add experimental screen clone.
+
+Overview of Changes in Cairo Composite Manager 0.2.95
+====================================
+
+* Some performances improvements
+* Fix some crash
+* Add experimental clone plugin
+
+Overview of Changes in Cairo Composite Manager 0.2.94
+====================================
+
+* Fix window shade issue
+* Some performance improvements
+* Add session management support
+
+Overview of Changes in Cairo Composite Manager 0.2.93
+====================================
+
+* Fix opacity when set with transset on framed window.
+
+Overview of Changes in Cairo Composite Manager 0.2.92
+====================================
+
+* Add settings UI page for plugins except magnifier
+* Add cursor redirect paint API
+* Fix some death window steal on screen
+* Mosaic plugin click on window activate it, shadow window when cursor is not
+  over them.
+* Magnifier plugin use latest cursor redirect API to draw pointer.
+* Fix some crash on enable/disable ccm
+* Fix some memery leak.
+
+Overview of Changes in Cairo Composite Manager 0.2.91
+====================================
+
+* Add xdg key configuration files
+* Enable by default xdg key configuration files
+* Fix some glitches when window return from fullscreen.
+
+Overview of Changes in Cairo Composite Manager 0.2.90
+====================================
+
+* API cleanup
+* Add decoration plugin
+* Add snapshot plugin
+* Add vala bindings
+* Fix shadow plugins
+* Fix mosaic plugins
+* Add experimental automate plugin
+* Add vala plugin sample
+* Various fixes
+
+Overview of Changes in Cairo Composite Manager 0.2.2
+====================================
+
+* API cleanup.
+* Fix TFP mode.
+* Magnifier performance improvement.
+
+Overview of Changes in Cairo Composite Manager 0.2.1
+====================================
+
+* Xrender performance improvement.
+* Plugin shadow fix with glitz tfp.
+* Glitz tfp backend fixes.
+
+Overview of Changes in Cairo Composite Manager 0.2.0
+====================================
+
+* Stack check rewrite.
+* Get/Set image rewrite
+* Plugins methods call improvement.
+* Timeline support.
+* Async property support.
+* Dynamic preferences change support.
+* Many performances improvements.
+* Add magnifier plugin.
+* Add mosaic plugin.
+* Experimental glitz TFP backend.
+* Experimental openvg backend.
+
+Overview of Changes in Cairo Composite Manager 0.1.3
+====================================
+
+* Add pixmap buffered surface, improve significantly the performance
+* Native pixmap backend (for now only xrender backend is supported)
+* Fix some issues in shadow plugins.
+* Some performances improvements
+
+Overview of Changes in Cairo Composite Manager 0.1.2
+====================================
+
+* Fix crash on plugin order (fix #04, #05)
+* Fix no shm mode
+* Animation enhancement
+* Fix configuration load and some default value
+* Sort extension to ensure they are in good place
+* Use region instead rectangle for damage
+* Fix freeze plugin and enable it by default
+* Add tray icon launcher
+* Add menu-animation plugin
+* Some performance improvements
+
+Overview of Changes in Cairo Composite Manager 0.1.1
+====================================
+
+* Don't shadow window without decoration
+* Rework of track damage
+* Add fade plugin
+* Fix some glitches on open and close windows
+* Add embrionic freeze plugin
+* Add backend support per screen
+* Implement CopySubBuffer in glitz backend.
+* Detect if an another composite manager run on startup
+* Add frame extends support
+* Add child window support
+* Some performance improvements
+
+Overview of Changes in Cairo Composite Manager 0.1.0
+====================================
+
+* First release!
+

@@ -1,0 +1,89 @@
+* Does WMBiff have a mailing list?
+
+There is no longer a WMBiff-specific mailing list, but it may be discussed
+on the Window Maker Developers mailing list, wmaker-dev@lists.windowmaker.org.
+
+See http://lists.windowmaker.org/.
+
+* Why doesn't WMBiff update immediately after I read my mail?
+
+WMBiff looks only at the flags associated with mail messages
+to decide if they've been read.  If your mail reader doesn't
+bother to update those flags immediately after you read a
+message, WMBiff has (essentially) no way of knowing that
+you've read the message.
+
+There are some workarounds:  In mutt, you can ask it to sync
+the mailbox using the sync-mailbox command: it will write
+the mailbox file to disk (or back to the IMAP server) so
+that WMBiff can update its counters.  Mutt's sync-mailbox
+command is bound to the $ key by default.  In Mac OS X mail,
+changing to a different mailbox usually flushes changes,
+so I often hit Command-4 to switch to the sent mailbox
+for a few seconds.
+
+No workarounds are known for Kmail, which updates the status
+flags of all mail as if it were read, then adds its own
+status field to note that some are unread.  (sourceforge
+tracker #706995).
+
+* WMBiff doesn't work.  How do I submit a bug?
+
+See the Troubleshooting section of the wmbiffrc man
+page.
+
+If that doesn't work, run 'wmbiff -debug > wmbiff.log' and
+remove any passwords left in wmbiff.log.  Submit this log
+and your wmbiffrc (sanitized of passwords of course) using
+'reportbug' under Debian, or by sending mail to
+wmaker-dev.
+
+* WMBiff doesn't do something I want. How do I suggest a feature?
+
+If using Debian, use 'reportbug wmbiff' and submit a
+wishlist bug.  Or, send mail with your suggestion to
+wmaker-dev@lists.windowmaker.org.
+
+Some previously requested features can't be done:
+ - Count IMAP deleted messages separately (the protocol
+    doesn't support it without locking the mailbox).
+ - Reset the count of new messages to zero when spawning
+    a mailer (it would just jump back again the next time
+    wmbiff looked).
+
+Previously suggested features that are really hard:
+ - Support dock sizes other than 64x64
+ - Inverse video on new mail (or do more visually to grab attention)
+
+* I'm about to start writing a patch. How do I make sure it will
+get incorporated in WMBiff?
+
+Start a conversation on wmaker-dev, and you'll probably
+get some help.
+
+Tidbits:
+ Avoid creating new Clients.
+  - If you want an existing client to do something differently,
+    find a way to parameterize its behavior.
+  - If you want to use a shell command to get some
+    information, make a recipe for ShellClient (open wmbiff.c
+    and search for 'gicu').
+ If you must create a new client, Avoid Duplicating Code.
+ Document your patch.  Add entries as appropriate to:
+  - sample.wmbiffrc
+  - wmbiffrc.5.in
+  - wmbiff.1
+
+* How do I get the very latest WMBiff from git?
+
+git clone http://repo.or.cz/dockapps.git
+cd dockapps/wmbiff
+
+* I added a feature to WMBiff. How do I submit a patch?
+
+Submit patches in the same way as you would patches for Window Maker.  See:
+http://repo.or.cz/w/wmaker-crm.git/blob/HEAD:/The-perfect-Window-Maker-patch.txt
+
+* This FAQ is wrong.
+
+Send mail to wmaker-dev@lists.windowmaker.org.

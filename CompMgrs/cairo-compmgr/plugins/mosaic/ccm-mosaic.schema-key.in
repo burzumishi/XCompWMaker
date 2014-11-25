@@ -1,0 +1,29 @@
+[spacing]
+Type=int
+Default=20
+_Description=The spacing between each areas of mosaic.
+
+[shortcut]
+Type=string
+Default=<Super>Tab
+_Description=The mosaic shortcut key.
+
+[duration]
+Type=float
+Default=0.2
+_Description=The mosaic animation duration.
+
+[left]
+Type=string
+Default=Left
+_Description=The mosaic left key.
+
+[right]
+Type=string
+Default=Right
+_Description=The mosaic right key.
+
+[activate]
+Type=string
+Default=Return
+_Description=The mosaic activate key.

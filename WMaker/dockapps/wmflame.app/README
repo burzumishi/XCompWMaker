@@ -1,0 +1,56 @@
+WMFlame-0.6 - Public release
+-----------------------------------------------------------
+Authors...: Dave Turner (turnerd@reed.edu)
+
+Note......: I saw the source for something called xflame, but didn't have the 
+	    headers to compile it.  So, using what I knew about flames, I wrote
+	    one myself.  
+
+
+Credits...: Thanks to Dag Wieers (dag@digibel.be) for wmpong, on which this is based.  William Tipton (tiptonwi@engr.orst.edu) added the pause feature.  Sergio Montesis for fixing the load-meter bug, and prompting me to clean up this document.
+
+
+Description
+-----------------------------------------------------------
+This makes an animated flame.  The flame algorithm is very standard.  
+It is intended for a windowmaker/afterstep dock/wharf applet.  Version 0.3 has been tested on windowmaker and afterstep.  It can be used as a system load monitor, but if you're worried about system load, this applet isn't easy on your processor.
+
+Usage
+-----------------------------------------------------------
+	wmflame -h will tell you how to use it:
+
+-lN       Use as load meter.
+   N = 1:   Load average over 1 minute
+   N = 2:   Load average over 5 minutes
+   N = 3:   Load average over 15 minutes
+
+-v        Print version number
+-m N      Load max is N.  You usually want N to be equal to the number
+          of CPUs you have.
+-n N      Load min is N.  This is usually 0.
+-b        Benchmarking mode: run 1000 frames, then quit.
+-g        Gas flame mode. Try it.
+-a X Y    Gets numbers from an arbitrary file X, using scanf string Y.
+-s N      Scan frequency.  In -l and -a modes, the file is checked every N 
+          frames.
+
+The -m option is intended for use with multiple processors.  If you only have 
+one processor, it's still useful.  If your load is never more than, say, 0.5, 
+you can use it to give full height flames at half load by using -m 0.5.  
+Note the spacing on the options: -l has no space, -m does.  Using these incorrectly may cause wmflame not to function as you expect.
+
+Once wmflame is started, there are 7 buttons.  + and - change the height of the flames.  /\ and \/ also change the height, but more randomly.  Using /\ increases the randomness of the flames and decreases the height.  Right (or center) clicking on the flame will pause it (useful for screenshots and to conserve processor power for important things).  left clicking the flames changes to the next color map.  X is decidedly evil when it comes to colors, so those are your choices.  Look at wmflame-master.xpm to figure out how to change them. 
+
+Files
+-----------------------------------------------------------
+README		This file.
+INSTALL		Installation instructions.
+BUGS		Description of little creatures.
+COPYING		GNU General Public License Version 2.
+
+
+Bugs
+--------------------------------------------------------------
+If you discover any bugs in this software, please send a
+bug report to turnerd@reed.edu and describe the problem in as much 
+detail as you can.  Better yet, fix it.  

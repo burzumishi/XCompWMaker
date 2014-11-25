@@ -1,0 +1,9 @@
+0.1 April something, 1999.  First release.
+0.2 May 27, 1999.  Added a choice of 3 color maps.  Changed default
+	           settings for a better look.
+0.3 June something, 1999.  William Tipton added a pause button.
+0.4 June 15, 1999.  Can be used a load meter.  Suggested by Richard Kuo.
+0.41 June 20, 1999  Fixed load-meter bug.
+0.42 July 10, 1999  Fixed a bug when many wmflames are open.
+0.5  July 11, 1999  Hal Larsson co-authored gas flame mode.
+0.6  July 25, 1999  Added arbitrary file mode.

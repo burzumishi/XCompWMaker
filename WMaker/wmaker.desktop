@@ -1,0 +1,20 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=WindowMaker
+Name[ru]=WindowMaker
+Name[el]=WindowMaker
+Name[eo]=WindowMaker
+Name[tr]=WindowMaker
+Comment=Log in using WindowMaker (Version 0.16.999.70492)
+Comment[ru]=Войти используя WindowMaker (Версия 0.16.999.70492)
+Comment[el]=Είσοδος με το WindowMaker (Έκδοση 0.16.999.70492)
+Comment[eo]=Ensaluti pere de WindowMaker (Versio 0.16.999.70492)
+Comment[fr]=Ouvrir une session WindowMaker (Version 0.16.999.70492)
+Comment[it]=Accedi con WindowMaker (Versione 0.16.999.70492)
+Comment[pt]=Inicie a sessão com o WindowMaker (Versão 0.16.999.70492)
+Comment[tr]=WindowMaker kullanarak giriş yaın (Version 0.16.999.70492)
+Comment[ko]=WindowMaker 로그인(버전 0.16.999.70492)
+Type=XSession
+Icon=/usr/share/WindowMaker/Icons/defaultAppIcon.xpm
+Exec=/usr/bin/wmaker
+TryExec=/usr/bin/wmaker

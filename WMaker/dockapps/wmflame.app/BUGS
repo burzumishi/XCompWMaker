@@ -1,0 +1,12 @@
+Sometimes (I don't know when), there's a line of junk at the top of the 
+applet.  This may be fixed as of 0.4.
+Color maps can't be changed without a hassle and a recompile.
+
+FIXED:
+Forgot to close a file handle in 0.40, resulting in the failure of the load meter.
+
+FIXED:
+fclose (0) was sometimes executed.  This is fixed in 0.42.
+
+FIXED:
+changing color maps reset parameters.

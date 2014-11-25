@@ -1,0 +1,127 @@
+.de Sh
+.br
+.if t .Sp
+.ne 5
+.PP
+\fB\\$1\fR
+.PP
+..
+.TH wmsystemtray 1 "@DATE@"
+.SH NAME
+wmsystemtray \- A freedesktop.org system tray as a Window Maker dock app
+.P
+.SH SYNOPSIS
+.B wmsystemtray
+.RB [\| options \|]
+.SH DESCRIPTION
+\fBwmsystemtray\fP is a system tray using the freedesktop.org system tray
+protocol designed as a Window Maker dock app. It has the ability to display
+more than one dock window to make room for more tray icons, and the ability to
+scroll through the icons if more are present than will fit.
+.SH OPTIONS
+.TP
+.BI "-display " <display\ name>
+Name of display to use.
+.TP
+.B --help
+Display usage information.
+.TP
+.BR -V ", " --version
+Display the version number and exit.
+.TP
+.BR -v ", " --verbose
+Print more messages to the console. May be repeated.
+.TP
+.BR -q ", " --quiet
+Print fewer messages to the console. May be repeated.
+.TP
+.BR -s ", " --small
+Use 16x16 tray icons, instead of 24x24. In other words, fit 9 icons instead of
+4 in one dock window.
+.TP
+.BI "-w " <n> "\fR,\fP --windows " <n>
+Specifies the number of dock windows to open. Each dock window is assigned a
+unique name (i.e. the first is wmsystemtray.wmsystemtray0, the second
+wmsystemtray.wmsystemtray1, and so on), so they can be reliably positioned in
+the dock or clip.
+.TP
+.B --id-windows
+Print the window's index number on the window, to make it easier to dock them
+in the right order. Note that if there are enough tray icons active, this
+number may be covered up.
+.TP
+.B --fill-rows
+Normally the first dock window is completely filled before any tray icons are
+placed in the second. This option fills the top row of each dock window before
+placing any icons in the second row, which may make more sense if you arrange
+the dock windows horizontally.
+.TP
+.BI "--arrows " <place>
+Normally, every dock window has both left and right scrolling arrows at the
+bottom. Specifying \fI--arrows horizontal\fP places the left arrow only on the
+first window and the right arrow only on the last, which may make more sense if
+the windows are arranged horizontally. \fI--arrows vertical\fP places the
+arrows only on the last window, which may make more sense if the windows are
+arranged vertically.
+.TP
+.BI "-c " <color> "\fR,\fP --fgcolor " <color>
+Specify a color for the page indicator and \fI--id-windows\fP indicators, instead of black. Colors may be specified in any format recognized by
+.B \%XParseColor
+In short, that's any color name in X's rgb.txt or an RGB color specified as
+"rgb:\fIrr\fP/\fIgg\fP/\fIgg\fP".
+.TP
+.BI "--bgcolor " <color>
+In non-Window Maker mode, specify the color for the window background. The
+default is to shape the window to fit the used area and to set
+\fIParentRelative\fP, which attempts to copy whatever is behind the window. 
+.TP
+.B --non-wmaker
+Activate non-Window Maker mode. This provides limited support for using the
+program in window managers that don't do Window Maker-style dockapps; the
+application still sizes itself as a 64x64 window, however, so you might be
+better served by a more traditional system tray.
+.SH DISPLAY
+The main portion of the dockapp has room for four 24x24 or nine 16x16 tray
+icons. At the bottom are left and right arrows for paging when more tray icons
+are available than can be displayed at once, with an indicator between showing
+the current "page" of icons and total number of pages currently available.
+
+In addition to left-clicking either scrolling arrows, the mouse's scroll wheel
+may be used on the bottom section to change pages.
+.SH SIGNALS
+SIGUSR1 and SIGUSR2 may be used to change pages. A program such as xbindkeys
+may be used to send these signals to wmsystemtray on appropriate key presses.
+.SH BUGS
+The balloon message portion of the freedesktop.org protocol is not implemented
+at this time. I've heard that the official Gnome system tray doesn't implement
+this either, and most tray apps seem to directly use dbus desktop notifications
+service.
+
+Most of the Xembed specification is not implemented, as it is not needed here.
+For example, the only point to redirecting input focus is to allow the outer
+window to see input events (and then the outer window has to forward those
+events to the embeds). But since we don't really care, we can just let the
+icons get events directly. Similarly, we don't take focus or activation, and we
+don't do accellerators.
+.SH SPECIFICATIONS
+.UR http://standards.freedesktop.org/systemtray-spec/systemtray-spec-0.3.html
+freedesktop.org System Tray Protocol Specification
+.UE
+
+.UR http://standards.freedesktop.org/xembed-spec/xembed-spec-0.5.html
+freedesktop.org XEmbed Protocol Specification
+.UE
+.SH AUTHORS
+\fBwmsystemtray\fP was written by \fIBrad Jorsch
+<anomie@users.sourceforge.net>\fP.
+.P
+Email regarding wmsystemtray should be sent to
+\fIanomie@users.sourceforge.net\fP.
+.SH INSPIRATION
+When I finally decided to make use of some applications that work via system
+tray icons, I looked around for a tray for my preferred window manager. Some
+didn't integrate well (I didn't want a bar at the top or bottom of the screen),
+some dockapps couldn't handle more than 4 icons at all, some could do 4 icons
+with paging (and much crashing if any program was killed), some could do more
+than 4 icons by creating arbitrary numbers of app icons (but undockable,
+because they were created "as needed"). So I decided to write my own, combining the best features into a stable app.

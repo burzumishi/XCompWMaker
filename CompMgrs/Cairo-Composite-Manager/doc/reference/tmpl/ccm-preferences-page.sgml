@@ -1,0 +1,64 @@
+<!-- ##### SECTION Title ##### -->
+CCMPreferencesPage
+
+<!-- ##### SECTION Short_Description ##### -->
+
+
+<!-- ##### SECTION Long_Description ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION See_Also ##### -->
+<para>
+
+</para>
+
+<!-- ##### SECTION Stability_Level ##### -->
+
+
+<!-- ##### SECTION Image ##### -->
+
+
+<!-- ##### STRUCT CCMPreferencesPage ##### -->
+<para>
+
+</para>
+
+
+<!-- ##### SIGNAL CCMPreferencesPage::need-restart ##### -->
+<para>
+
+</para>
+
+@ccmpreferencespage: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### SIGNAL CCMPreferencesPage::plugin-state-changed ##### -->
+<para>
+
+</para>
+
+@ccmpreferencespage: the object which received the signal.
+@arg1: 
+@arg2: 
+
+<!-- ##### FUNCTION ccm_preferences_page_new ##### -->
+<para>
+
+</para>
+
+@screen_num: 
+@Returns: 
+
+
+<!-- ##### FUNCTION ccm_preferences_page_get_widget ##### -->
+<para>
+
+</para>
+
+@self: 
+@Returns: 
+
+

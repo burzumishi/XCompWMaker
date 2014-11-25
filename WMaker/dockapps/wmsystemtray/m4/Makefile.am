@@ -1,0 +1,2 @@
+SUBDIRS =
+EXTRA_DIST = xpm.m4

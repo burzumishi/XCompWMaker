@@ -1,0 +1,55 @@
+/* -*- Mode: C; indent-tabs-mode: nil; c-basic-offset: 4; tab-width: 4 -*- */
+/*
+ * cairo-compmgr
+ * Copyright (C) Nicolas Bruguier 2007-2011 <gandalfn@club-internet.fr>
+ * 
+ * cairo-compmgr is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * cairo-compmgr is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU Lesser General Public License for more details.
+ * 
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#ifndef _CCM_CAIRO_UTILS_H_
+#define _CCM_CAIRO_UTILS_H_
+
+#include <cairo.h>
+
+typedef enum
+{
+    CAIRO_CORNER_NONE = 0,
+    CAIRO_CORNER_TOPLEFT = 1,
+    CAIRO_CORNER_TOPRIGHT = 2,
+    CAIRO_CORNER_BOTTOMLEFT = 4,
+    CAIRO_CORNER_BOTTOMRIGHT = 8,
+    CAIRO_CORNER_ALL = 15
+} CairoCorners;
+
+void cairo_rectangle_round (cairo_t * cr, double x, double y, double w,
+                            double h, int radius, CairoCorners corners);
+void cairo_notebook_page_round (cairo_t * cr, double x, double y, double w,
+                                double h, double tx, double tw, double th,
+                                int radius);
+
+cairo_surface_t *cairo_image_surface_blur (cairo_surface_t * surface,
+                                           int radius, double sigma, int x,
+                                           int y, int width, int height);
+cairo_surface_t *cairo_image_surface_blur2 (cairo_surface_t * surface,
+                                            double radius, int x, int y,
+                                            int width, int height);
+void             cairo_blur_image_surface  (cairo_surface_t *surface,
+                                            int radius,
+                                            cairo_rectangle_t clip);
+cairo_surface_t *cairo_blur_path (cairo_surface_t * surface,
+                                  cairo_path_t * path, cairo_path_t * clip,
+                                  int border, double step, double width,
+                                  double height);
+
+#endif                          /* _CCM_CAIRO_UTILS_H_ */

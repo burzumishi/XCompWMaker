@@ -1,0 +1,10 @@
+XCOMM $XConsortium: Imakefile,v 1.17 93/08/17 21:20:11 rws Exp $
+
+SYS_LIBRARIES = MathLibrary
+        DEPLIBS = $(DEPXMULIB) $(DEPXTOOLLIB) $(DEPXLIB)
+LOCAL_LIBRARIES = $(XMULIB) $(XTOOLLIB) $(XLIB) $(XPMLIB)
+
+SRCS = wmeyes.c
+OBJS = wmeyes.o
+
+ComplexProgramTarget(wmeyes)

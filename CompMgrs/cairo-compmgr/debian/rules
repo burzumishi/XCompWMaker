@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/simple-patchsys.mk
+include /usr/share/cdbs/1/class/autotools.mk
+include /usr/share/cdbs/1/class/gnome.mk
+include /usr/share/gnome-pkg-tools/1/rules/clean-la.mk
+
+DEB_CONFIGURE_EXTRA_FLAGS += --enable-perf-plugin --enable-stats-plugin
+
+binary-install/cairo-compmgr-plugins::
+	rm -f debian/cairo-compmgr-plugins/usr/share/cairo-compmgr/ui/ccm-preferences.ui
+	rm -f debian/cairo-compmgr-plugins/usr/share/cairo-compmgr/schemas/ccm-display.schema-key
+	rm -f debian/cairo-compmgr-plugins/usr/share/cairo-compmgr/schemas/ccm-screen.schema-key

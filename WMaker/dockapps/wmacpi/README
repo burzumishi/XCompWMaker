@@ -1,0 +1,54 @@
+For install instructions, see "INSTALL" file.
+
+Usage:
+
++-------------+
+|battery graph| <- visual percentage battery remaining
+|[:][=] [100%]| <- [:] - on AC (blink when charging) [=] - on battery
+|[00:00]  [bX]| <- [00:00] time remaining   [bX] battery being monitored.
+|status   area| <- messages scroll here
++-------------+
+
+see wmacpi -h for some command line switches
+
+**********************************************************************
+
+wmacpi is a dockapp ACPI battery monitor for modern kernels (ie,
+2.4.17 or later, and 2.6 kernels). Basically, it opens various files
+under /proc/acpi, reads status information from them, and then
+displays summaries.
+
+Version 1.99 and later provides full support for multiple batteries.
+You can tell it to monitor a particular battery with the -m option,
+which will display the percentage remaining and current status message
+for that battery. The time remaining and AC/battery status are global
+- the time remaining is calculated based on all batteries found on the
+system. When charging, the time displayed is the time remaining until
+the battery is fully charged - this only works sensibly if your ACPI
+system is implemented properly (far, far too many laptops have
+buggered ACPI implementations).
+
+The displayed time is averaged over 50 samples, each taken every three
+seconds (by default). This greatly improves the accuracy of the
+numbers - on my laptop, the time remaining seems to be overstated by a
+good hour or so if you only sample once compared to fifty times.
+
+Some ACPI implementations are stupid enough to block interrupts while
+reading status information from the battery over a slow bus - this
+means that on such b0rken laptops, running an ACPI battery monitor
+could affect interactivity. To provide a workaround for this, current
+versions of wmacpi supports setting the sample rate from the command
+line. The --sample-rate option specifies the number of times the
+battery is sampled every minute - the default is 20, and the maximum
+value is 600. Since -s 600 translates to sampling every 0.1 seconds,
+you really don't want to do that unless you're just having fun . . .
+
+Also provided is a command line tool to report the battery status. By
+default this will only sample once, but with the -a option you can
+specify a number. Be aware that it will try to take all those samples
+in the space of one second, so if your ACPI implementation is b0rken
+this could have adverse effects.
+
+Please report bugs to <wmaker-dev@lists.windowmaker.org>
+
+Simon Fowler, 2007-07-13.

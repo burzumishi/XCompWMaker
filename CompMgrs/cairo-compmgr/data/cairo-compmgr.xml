@@ -1,0 +1,90 @@
+<glade-catalog name="ccm" library="gladeccm" depends="gtk+">
+    <init-function>glade_ccm_init</init-function>
+    <glade-widget-classes>
+        <glade-widget-class get-type-function="ccm_config_check_button_get_type" 
+                            name="CCMConfigCheckButton" 
+                            generic-name="config-checkbutton" 
+                            title="CCM Config CheckButton"
+                            icon-name="widget-gtk-checkbutton">
+            <set-property-function>glade_ccm_config_check_button_set_property</set-property-function>
+            <properties>
+                <property id="key" default="">
+                </property>
+                <property optional="True" id="plugin">
+                </property>
+                <property optional="True" id="screen" default="-1">
+	                <parameter-spec>
+	                    <type>GParamInt</type>
+	                </parameter-spec>
+                </property>
+            </properties>
+        </glade-widget-class>
+        <glade-widget-class get-type-function="ccm_config_adjustment_get_type" 
+                            name="CCMConfigAdjustment" 
+                            generic-name="config-adjustment" 
+                            title="CCM Config Adjustment">
+            <set-property-function>glade_ccm_config_adjustment_set_property</set-property-function>
+            <properties>
+                <property id="key" default="">
+                </property>
+                <property optional="True" id="plugin">
+                </property>
+                <property optional="True" id="screen" default="-1">
+	                <parameter-spec>
+	                    <type>GParamInt</type>
+	                </parameter-spec>
+                </property>
+            </properties>
+        </glade-widget-class>
+        <glade-widget-class get-type-function="ccm_config_color_button_get_type" 
+                            name="CCMConfigColorButton" 
+                            generic-name="config-color-button" 
+                            title="CCM Config Color Button"
+                            icon-name="widget-gtk-colorbutton">
+            <set-property-function>glade_ccm_config_color_button_set_property</set-property-function>
+            <properties>
+                <property id="key" default="">
+                </property>
+                <property optional-default="False" id="key-alpha" default="">
+                </property>
+                <property optional="True" id="plugin">
+                </property>
+                <property optional="True" id="screen" default="-1">
+	                <parameter-spec>
+	                    <type>GParamInt</type>
+	                </parameter-spec>
+                </property>
+            </properties>
+        </glade-widget-class>
+        <glade-widget-class get-type-function="ccm_config_entry_shortcut_get_type" 
+                            name="CCMConfigEntryShortcut" 
+                            generic-name="config-entryshortcut" 
+                            title="CCM Config EntryShortcut"
+                            icon-name="widget-gtk-entry">
+            <set-property-function>glade_ccm_config_entry_shortcut_set_property</set-property-function>
+            <properties>
+                <property id="mouse" default="False">
+	                <parameter-spec>
+	                    <type>GParamBoolean</type>
+	                </parameter-spec>
+                </property>
+                <property id="key" default="">
+                </property>
+                <property optional="True" id="plugin">
+                </property>
+                <property optional="True" id="screen" default="-1">
+	                <parameter-spec>
+	                    <type>GParamInt</type>
+	                </parameter-spec>
+                </property>
+            </properties>
+        </glade-widget-class>
+    </glade-widget-classes>
+    
+    <glade-widget-group name="ccm-objects" title="CCM Widgets">
+        <glade-widget-class-ref name="CCMConfigCheckButton"/>
+        <glade-widget-class-ref name="CCMConfigAdjustment"/>
+        <glade-widget-class-ref name="CCMConfigColorButton"/>
+        <glade-widget-class-ref name="CCMConfigEntryShortcut"/>
+    </glade-widget-group>
+</glade-catalog>
