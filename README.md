@@ -1,7 +1,7 @@
 XCompWMaker
 ===========
 
-Classic Window Maker with Composition effects.
+__Window Maker with Composition Effects__
 
 All these packages where modified to work together, choose the ones you want to play arround with:
 
